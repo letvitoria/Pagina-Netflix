@@ -1,7 +1,78 @@
-/* Global page background and base styles */
-html, body {
-    height: 100%;
+*{
     margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding-inline: 16px;
+}
+
+.header{
+    background: #a5a5a5;
+    padding-inline: 16px;
+}
+
+/* Header element: make background black and text white */
+header{
     background-color: #000;
     color: #fff;
+    padding-inline: 16px;
+}
+.nav{
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-list{
+    display: flex;
+    flex: 1; /* allow nav-list to take available space so it can be centered */
+    justify-content: center; /* center the menu items */
+    gap: 32px;
+    list-style: none;
+}
+
+/* Remove underline from navbar links */
+.nav-list a{
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+    padding-block: 16px;
+}
+
+/* Right-side actions: search, notifications, avatar */
+.nav-actions{
+    display: flex;
+    gap: 15px; /* small spacing between icons */
+    align-items: flex-end;
+    margin-left: auto; /* push the actions group all the way to the right */
+    padding-right: 16px; /* small space from the right edge */
+}
+
+.nav-actions img{
+    width: 26px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-actions .avatar{
+    width: 36px;
+}
+
+.logo{
+    height: 32px;
+}
+.search-icon, .bell-icon{
+    height: 32px;
+    
+}
+.avatar{
+    height: 30px;
+    
+    
 }
