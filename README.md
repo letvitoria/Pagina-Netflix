@@ -3,7 +3,7 @@
 - Este projeto foi desenvolvido como uma atividade avaliativa para a disciplina de Desenvolvimento Web no Instituto Federal de Rondônia (IFRO). Ele consiste na recriação da interface de usuário da página inicial da Netflix.\
 - Instituto Federal de Rondônia 🏫📗
 
-![Captura de Tela da Página Inicial da Netflix](assets/netflix-logo.png)
+![Captura de Tela da Página Inicial da Netflix](assets/logo-netflix.png)
   
 ## 🖥️ Tecnologias Utilizadas: 
 ♦️ HTML 
