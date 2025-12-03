@@ -1,57 +1,97 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    padding-inline: 16px;
+    padding-inline: 0;
+    background-image: url("../assets/gemini-young-royals.png");
+    /*https://rollingstone.com.br/wp-content/uploads/young-royals-divulgacao-netflix.jpg*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+html, body{
+    height: 100%;
 }
 
 .header{
     background: #a5a5a5;
     padding-inline: 16px;
+    position: relative;
+
 }
 
-/* Header element: make background black and text white */
+
 header{
     background-color: #000;
     color: #fff;
-    padding-inline: 16px;
+    padding-inline: 0;
+    
 }
 .nav{
     max-width: 1280px;
-    height: 70px;
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        /* Mobile: default closed state (small header with logo + hamburger) */
+        .nav{
+            flex-direction: row; /* logo + button on same line */
+            align-items: center;
+            height: 56px;
+            padding-inline: 12px;
+        }
 
-}
-.nav-list{
-    display: flex;
-    flex: 1; /* allow nav-list to take available space so it can be centered */
-    justify-content: center; /* center the menu items */
-    gap: 32px;
-    list-style: none;
-}
+        /* hide the action icons on small screens (search, bell, avatar) */
+        .nav-actions{
+            display: none !important;
+        }
 
-/* Remove underline from navbar links */
-.nav-list a{
-    font-size: 18px;
-    text-decoration: none;
-    color: inherit;
-    padding-block: 16px;
-}
+        /* nav-list hidden by default on mobile; shown when .nav has .open */
+        .nav-list{
+            display: none;
+        }
 
-/* Right-side actions: search, notifications, avatar */
-.nav-actions{
+        .nav.open{
+            flex-direction: column;
+            align-items: stretch;
+            height: auto;
+        }
+
+        .nav.open .nav-list{
+            display: flex;
+            position: static;
+            flex-direction: column;
+            background-color: rgba(0,0,0,0.95);
+            padding: 12px 0;
+            gap: 8px;
+            z-index: 999;
+            width: 100%;
+        }
+
+        .nav.open .nav-list li{
+            text-align: center;
+            color: #fff; /* visible on dark background */
+            padding: 8px 0;
+        }
+
+        .nav.open .nav-list a{
+            line-height: 40px;
+            width: 100%;
+            display: block;
+            padding-block: 8px;
+        }
+
+        /* logo alignment on mobile */
+        .nav .logo{
+            align-self: center;
+            margin: 0;
+        }
     display: flex;
-    gap: 15px; /* small spacing between icons */
+    gap: 15px; /*espaço entre os icones */
     align-items: flex-end;
-    margin-left: auto; /* push the actions group all the way to the right */
-    padding-right: 16px; /* small space from the right edge */
+    margin-left: auto; 
+    padding-right: 16px; 
 }
 
 .nav-actions img{
@@ -75,4 +115,85 @@ header{
     height: 30px;
     
     
+}
+
+.menu-button{
+    display: none; 
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    margin-left: 16px;
+    align-self: center;
+    position: relative;
+    z-index: 1001;
+}
+.btn-line{
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+@media (min-width: 960px) {
+    .hide-on-desktop{
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 960px) {
+    .hide-on-desktop{
+        display: flex; 
+    }
+    .menu-button{
+        display: flex;
+        margin-left: auto; 
+        padding: 8px;
+    }
+}
+@media (max-width: 960px) {
+    .nav{
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        padding-inline: 12px;
+    }
+
+    
+    .nav-actions{
+        display: none !important;
+    }
+
+    .nav-list{
+        opacity: 0;
+        top: 0;
+        transform: translateY(-140px);
+        position: static;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.95);
+        padding: 12px 0;
+        gap: 8px;
+        z-index: 999;
+        width: 100%;
+    }
+
+    .nav-list li{
+        text-align: center;
+        color: #fff; 
+        padding: 8px 0;
+    }
+
+    .nav-list a{
+        line-height: 40px;
+        width: 100%;
+        display: block;
+        padding-block: 8px;
+    }
+
+    
+    .nav .logo{
+        align-self: flex-start;
+        margin: 8px 0;
+    }
 }
