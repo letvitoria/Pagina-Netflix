@@ -4,9 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmes</title>
-    <link rel="stylesheet" href="static/index.css">
+    <title>Netflix - Filmes</title>
+    <link rel="stylesheet" href="../static/movies.css">
+    <script defer src="../app.js"></script>
 </head>
+
 <body>
-    <h1> Página de Filmes </h1>
+    <header>
+        <nav class="nav">
+            <img src="../assets/logo-netflix.png" alt="Logo Netflix" class="logo">
+            
+            <ul id="main-nav" class="nav-list">
+                <li><a href="../index.html">Início</a></li>      
+                <li><a href="../home/series.html">Séries</a></li>
+                <li><a href="../home/movies.html">Filmes</a></li>
+                <li><a href="../home/most-popular.html">Bombando</a></li>
+                <li><a href="../home/mylist.html">Minha Lista</a></li>
+                <li><a href="../home/languages.html">Navegar por idiomas</a></li>
+            </ul>
+            
+            <button class="menu-button hide-on-desktop" aria-expanded="false" aria-label="Abrir menu" aria-controls="main-nav">
+                <span class="btn-line" aria-hidden="true"></span>
+                <span class="btn-line" aria-hidden="true"></span>
+                <span class="btn-line" aria-hidden="true"></span>
+            </button>
+
+
+            <div class="nav-actions">
+                <img src="../assets/lupa.png" alt="Buscar" class="search-icon">
+                <img src="../assets/notificação.png" alt="Notificações" class="bell-icon">
+                <img src="../assets/Netflix-avatar.png" alt="Perfil" class="avatar">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="color: white; text-align: center; margin-top: 100px;">Sessão de Filmes</h1>
+    </main>
 </body>
+</html>
