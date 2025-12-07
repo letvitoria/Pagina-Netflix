@@ -4,16 +4,39 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte padrão da Netflix Obs: Usar em todas as telas */
-    background-image: url("../assets/gemini-young-royals.png");
+.First-content {
+    width: 100%;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
+}
+
+.First-content img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.First-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to top, rgb(20, 20, 20,1), rgba(37, 37, 37,0));
+    pointer-events: none;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Caminho da imagem ajustado para sair da pasta static e ir para assets */
+    background-color: #141414;
     height: 100vh;
     color: white;
-    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+    overflow-x: hidden;
 }
 
 
@@ -47,28 +70,28 @@ header.black-bg {
 /* ÍCONES PLAY E SOM */
 .play-icon{
     position: absolute;
-    top: 70%;
+    top: 74%;
     left: 5%;
     height: 240px;
     
 }
 .som-icon{
     position: absolute;
-    top: 82%;
+    top: 85%;
     left: 85%;
     height: 50px;
 }
 /* ICONE DE CLASSIFICAÇÃO INDICATIVA */
 .classificacao-icon{
     position: absolute;
-    top: 82%;
+    top: 85%;
     left: 88%;
     height: 50px;
 }
 /* ICONE DE MAIS INFORMAÇÕES */
 .informacoes-icon{
     position: absolute;
-    top: 67%;
+    top: 70.5%;
     left: 18%;
     height: 300px;
 }
@@ -236,4 +259,49 @@ header.black-bg {
         opacity: 1; 
         transform: translateY(0); 
     }
+}
+
+.container {
+    margin-bottom: 40px;
+    padding-left: 60px;
+}
+.container h2{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.films-container {
+    display: flex; /* Com 'overflow-x: scroll', você pode arrastar a linha lateralmente (simulando um carrossel) */
+    overflow-x: scroll; 
+    padding-bottom: 10px; /* Para visualizar a barra de scroll */
+}
+
+/*Ocultar a barra de rolagem*/
+.films-container::-webkit-scrollbar {
+    display: none;
+}
+
+.films {
+    position: relative;
+    width: 280px; /* Largura base para cada cartaz. Ajuste conforme desejar. */
+    height: 160px; /* Altura base. A Netflix usa diferentes proporções. */
+    margin-right: 10px;
+    flex-shrink: 0; /* Impede que os cartazes diminuam */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden; /* Para garantir que a imagem não ultrapasse o border-radius */
+}
+
+.films img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.films:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 10px 10px 10px #000000;
 }
