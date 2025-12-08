@@ -203,6 +203,9 @@ header.black-bg {
     .menu-button {
         display: flex;
     }
+    .play{
+        display: none;
+    }
 
     /* Esconde as ações do lado direito no mobile */
     .nav-actions {
