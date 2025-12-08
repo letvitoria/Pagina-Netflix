@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /*rolagem suave */
 }
 
 .First-content {
@@ -275,6 +276,7 @@ header.black-bg {
     display: flex; /* Com 'overflow-x: scroll', você pode arrastar a linha lateralmente (simulando um carrossel) */
     overflow-x: scroll; 
     padding-bottom: 10px; /* Para visualizar a barra de scroll */
+    scroll-behavior: smooth; /*rolagem suave */
 }
 
 /*Ocultar a barra de rolagem*/
