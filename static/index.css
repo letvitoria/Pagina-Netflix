@@ -68,14 +68,22 @@ header.black-bg {
     height: 25px; /* Tamanho mais realista para Desktop */
     margin-right: 25px; /* Espaço mínimo à direita da logo */
 }
-/* ÍCONES PLAY E SOM */
+
+
 .play-icon{
     position: absolute;
-    top: 74%;
-    left: 5%;
-    height: 240px;
-    
+    top: 77%; /* CHAVE 1: Mesmo valor de TOP para alinhamento horizontal */
+    left: 8%; /* Posição inicial: 8% */
+    height: 220px; /* Mantido o tamanho original */
 }
+/* ICONE DE MAIS INFORMAÇÕES */
+.informacoes-icon{
+    position: absolute;
+    top: 75%; /* CHAVE 2: Mesmo valor de TOP para alinhamento horizontal */
+    left: 20%; /* Posição à direita, com espaço do ícone 'play-icon' */
+    height: 260px; /* Mantido o tamanho original */
+}
+
 .som-icon{
     position: absolute;
     top: 85%;
@@ -89,13 +97,7 @@ header.black-bg {
     left: 88%;
     height: 50px;
 }
-/* ICONE DE MAIS INFORMAÇÕES */
-.informacoes-icon{
-    position: absolute;
-    top: 70.5%;
-    left: 18%;
-    height: 300px;
-}
+
 /* Media query */
 @media (min-width: 961px) {
     .logo {
