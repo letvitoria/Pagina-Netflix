@@ -284,8 +284,8 @@ header.black-bg {
 
 .films {
     position: relative;
-    width: 280px; /* Largura base para cada cartaz. Ajuste conforme desejar. */
-    height: 160px; /* Altura base. A Netflix usa diferentes proporções. */
+    width: 400px; /* Largura base para cada cartaz. Ajuste conforme desejar. */
+    height: 200px; /* Altura base. A Netflix usa diferentes proporções. */
     margin-right: 10px;
     flex-shrink: 0; /* Impede que os cartazes diminuam */
     transition: transform 0.3s ease-in-out;
