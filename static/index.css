@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /*rolagem suave */
 }
 
 .First-content {
@@ -275,6 +276,7 @@ header.black-bg {
     display: flex; /* Com 'overflow-x: scroll', você pode arrastar a linha lateralmente (simulando um carrossel) */
     overflow-x: scroll; 
     padding-bottom: 10px; /* Para visualizar a barra de scroll */
+    scroll-behavior: smooth; /*rolagem suave */
 }
 
 /*Ocultar a barra de rolagem*/
@@ -284,8 +286,8 @@ header.black-bg {
 
 .films {
     position: relative;
-    width: 280px; /* Largura base para cada cartaz. Ajuste conforme desejar. */
-    height: 160px; /* Altura base. A Netflix usa diferentes proporções. */
+    width: 400px; /* Largura base para cada cartaz. Ajuste conforme desejar. */
+    height: 200px; /* Altura base. A Netflix usa diferentes proporções. */
     margin-right: 10px;
     flex-shrink: 0; /* Impede que os cartazes diminuam */
     transition: transform 0.3s ease-in-out;
